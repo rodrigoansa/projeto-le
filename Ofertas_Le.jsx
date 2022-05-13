@@ -10,11 +10,11 @@ var SubTituloOne = MyJanela.add("statictext", undefined, "DESCRIÇÃO");
 
 
 //Escrever nome dos produto 1, produto 2, Marca e referência.
-var textGroup = MyJanela.add("group", undefined, "");
+var textGroup = MyJanela.add("group", undefined, "textGroup");
 textGroup.orientation = "column";
-textGroup.size = [300, 600];
 
 var produtoOne = textGroup.add("edittext", undefined,"Produto 1");
+var buttonOne = textGroup.add("button", undefined, "Aplicar");
 var produtoTwo = textGroup.add("edittext", undefined, "Produto 2");
 var marca = textGroup.add("edittext", undefined, "Marca");
 var referencia = textGroup.add("edittext", undefined, "Referências");
@@ -27,7 +27,7 @@ referencia.size = [180, 25];
 
 // Criar botão aplicar para cada um.
 var grupoBotao = MyJanela.add("group", undefined, "grupoBotao");
-grupoBotao.orientation = "row";
+grupoBotao.orientation = "column";
 
 var buttonOne = grupoBotao.add("button", undefined, "Aplicar");
 
