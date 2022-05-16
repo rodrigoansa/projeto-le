@@ -44,6 +44,16 @@ var arrayDropTag = ["1 Tag", "2 Tags", "3 Tags", "4 Tags"];
 var dropdowTag = painelTags.add("dropdownlist", undefined, arrayDropTag);
 dropdowTag.selection = 0;
 
+function checkboxTag (checkTag){
+    if (checkTag = true ){
+        return "true"
+    } else {
+        return "false"
+    }
+
+} 
+onclick = checkTag;
+
 //Escrever nome tag 1, tag 2, tag, 3 e tag 4
 var groupTagOne = MyJanela.add("group", undefined, "groupTagOne");
 groupTagOne.orientation = "row";
