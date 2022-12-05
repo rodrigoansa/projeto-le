@@ -1,7 +1,7 @@
 //Criar Janela principal.
 var MyJanela = new Window("palette", "Ofertas Le v 1.0", undefined);
 //var titulo = MyJanela.add("statictext", undefined, "OFERTAS LE ");
-MyJanela.orientation = "column";
+MyJanela.orientation= "column";
 
 var PegandoMarca = File("imagensLe/ofertasLe.png");
 var Marca = MyJanela.add("image", undefined, PegandoMarca);
