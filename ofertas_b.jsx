@@ -107,7 +107,7 @@ function ofertaLeScript(thisObj) {
                     referencia: referencia
                 };
                 
-                getOferta(input);
+                gettag(input);
               };
 
 
