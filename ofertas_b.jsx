@@ -36,6 +36,7 @@ function ofertaLeScript(thisObj) {
               painelLe.grp.descricao.ofertas.selection = 0;
               painelLe.grp.tags.tag.selection = 0;
 
+              //Recebe os valores digitado na caixa
               painelLe.grp.descricao.salvarDes.onClick = function() {
                 var dropdownCurrentIndex = painelLe.grp.descricao.ofertas.selection.index;
                 var linha1 = painelLe.grp.descricao.linha1.text;
@@ -75,9 +76,10 @@ function ofertaLeScript(thisObj) {
                 getOferta(input);
               };
 
+              //Recebe os valores digitado na caixa
               painelLe.grp.tags.salvarTag.onClick = function() {
                 var dropdownCurrentIndex = painelLe.grp.tags.tag.selection.index;
-                var tag1 = painelLe.grp.tags.tag1.text;
+                var tag1 = painelLe.grp.tags.tag1.text;                
                 var tag2 = painelLe.grp.tags.tag2.text;
                 var tag3 = painelLe.grp.tags.tag3.text;
                 
@@ -93,18 +95,16 @@ function ofertaLeScript(thisObj) {
               };
               painelLe.grp.tags.tag.onChange = function() {
                 var dropdownCurrentIndex = painelLe.grp.tags.ofertas.selection.index;
-                var linha1 = painelLe.grp.tags.linha1;
-                var linha2 = painelLe.grp.tags.linha2;
-                var marca = painelLe.grp.tags.marca;
-                var referencia = painelLe.grp.tags.referencia;
+                var tag1 = painelLe.grp.tags.tag1.text;
+                var tag2 = painelLe.grp.tags.tag2.text;
+                var tag3 = painelLe.grp.tags.tag3.text;
 
                 var input = {
                     index: dropdownCurrentIndex,
-                    linha1: linha1,
-                    linha2: linha2,
-                    linha3: linha3,
-                    marca: marca,
-                    referencia: referencia
+                    tag1: tag1,
+                    tag2: tag2,
+                    tag3: tag3,
+                    
                 };
                 
                 gettag(input);
@@ -131,7 +131,7 @@ function ofertaLeScript(thisObj) {
     }
 }
 
-var salvar = function(input) {
+var salvarDes = function(input) {
     for (var it = 1; it <= app.project.numItems; it++){
         var item = app.project.item(it);
         if(item instanceof CompItem && item.name === ofertas[input.index]) {
